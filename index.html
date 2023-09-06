@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+    <script
+      src="https://kit.fontawesome.com/d825e33153.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a id="logo">
+          <img src="./img/logo.png" alt="Logo App" />
+        </a>
+      </div>
+      <div class="categories">
+        <nav class="center-child">
+          <ul>
+            <li>
+              <a class="button" href="#destacados">Inicio</a>
+            </li>
+            <li>
+              <a class="button" href="#modelos">Servicios</a>
+            </li>
+            <li>
+              <a class="button" href="#amenidades">Rutas</a>
+            </li>
+            <li>
+              <a class="button" href="#proceso_compra">Proceso Compra</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer">
+        <a href="#footer" id="contacto"> Footer </a>
+      </div>
+    </div>
+    <main>
+      <div class="container">
+        <div class="section">
+          <h2 class="section-heading">Nuestros Servicios</h2>
+          <img src="./img/background-img-1.jpg" alt="Fondo con Autobuses">
+          <p class="section-content">
+            Nuestra gran flotilla de autobuses y camionetas, totalmente
+            equipadas y personal de choferes, están capacitados para brindar un
+            viaje placentero y seguro.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section">
+          <h2 class="section-heading">Contáctanos</h2>
+
+          <p class="section-content">
+            ¿Interesado en nuestros servicios? ¡Contáctanos hoy mismo para
+            obtener más información y solicitar cotizaciones!
+          </p>
+
+        <a href="#footer" class="button">¡Envianos un Correo!</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section">
+          <h2 class="section-heading">Rastreo en Línea</h2>
+          <p class="section-content">
+            Utiliza nuestra herramienta de rastreo en línea para mantener un
+            seguimiento de tus envíos en tiempo real. Mantén a tus clientes
+            informados.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&copy; 2023 Empresa de Transportes. Todos los derechos reservados.</p>
+      <div class="contacto-container">
+        <h2>CONTACTO</h2>
+        <form action="" id="contacto-form">
+          <input type="text" id="nombre" placeholder="Nombre" />
+          <input type="text" id="correo" placeholder="Correo" type="email" />
+          <textarea name="asunto" id="" cols="30" rows="10"></textarea>
+          <button class="button" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.278984761664!2d-110.91489855!3d29.1036222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce85ec71086959%3A0x86af17904efa2c55!2sTransportes%20Aviles!5e0!3m2!1ses-419!2smx!4v1693953050076!5m2!1ses-419!2smx" 
+        class="map-iframe"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      </div>
+    </footer>
+    <script>
+      // JavaScript para mostrar/ocultar el menú en pantallas pequeñas
+      const menuIcon = document.querySelector(".menu-icon");
+      const nav = document.querySelector(".categories");
+
+      menuIcon.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
+    <script src="js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
