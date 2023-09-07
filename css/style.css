@@ -68,12 +68,7 @@ textarea {
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ * Hide only visually, but have it available for screen readers
  */
 
 .visually-hidden {
@@ -90,8 +85,7 @@ textarea {
 
 /*
  * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
+ * to be focusable when navigated to via the keyboard
  */
 
 .visually-hidden.focusable:active,
@@ -218,6 +212,17 @@ img {
   border-radius: 20px;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 50vh;
+  margin: 0px;
+  padding: 10px;
+  color: var(--background-color);
+  width: 100%;
+}
+
 .button {
   text-decoration: none;
   padding: 10px;
@@ -273,6 +278,17 @@ nav > ul > li {
   align-items: center;
 }
 
+#eventos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+}
+
 .section-heading {
   display: flex;
   justify-content: center;
@@ -311,7 +327,7 @@ nav > ul > li {
   bottom: 20px;
   right: 20px;
 
-  background-color: #34495e;
+  background-color: var(--accent-color);
   height: 50px;
   width: 50px;
   border-radius: 25px;
@@ -342,6 +358,59 @@ nav > ul > li {
 .col-3 {
   width: 33%;
   padding: 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-3 img{
+  width: 80%;
+  border-radius: 20px;
+  
+}
+
+.col-60 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.col-40 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#company-text{
+  font-family: 'Bungee Inline';
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 4em;
+}
+
+#inicio {
+  min-height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: 0.3s;
+}
+
+#inicio:hover{
+  background-color: var(--primary-color);
+  color: white;
 }
 
 /* .container:first-child {
@@ -350,16 +419,7 @@ nav > ul > li {
   margin: 0 0 20px 0;
 } */
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  height: 50vh;
-  margin: 0px;
-  padding: 10px;
-  color: var(--background-color);
-  width: 100%;
-}
+
 
 .logo {
   max-width: 120px;
