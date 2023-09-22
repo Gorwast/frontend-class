@@ -1,0 +1,25 @@
+$font-color: #121111;
+$background-color: #e6e5e5;
+$background-color-dark: hsl(0, 2%, 75%);
+$primary-color-dark: hsl(0, 87%, 26%);
+$primary-color: hsl(0, 87%, 36%);
+$primary-color-light: hsl(0, 87%, 46%);
+$primary-color-lighter: hsl(0, 87%, 56%);
+$secondary-color: #cfcfcf;
+$accent-color: #e50f0f;
+
+@mixin display(
+  $display: flex,
+  $flex-direction: column,
+  $flex-wrap: nowrap,
+  $align-content: center,
+  $align-items: center,
+  $justify-content: space-between
+) {
+  display: $display;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  align-content: $align-content;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

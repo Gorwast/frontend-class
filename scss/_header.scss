@@ -1,0 +1,41 @@
+.header {
+  overflow: hidden;
+  justify-content: space-between;
+
+  background-color: $background-color;
+
+  padding: 20px 0px;
+  width: 100%;
+
+  .footer {
+    display: inline-flex;
+    align-content: center;
+    padding: 20px;
+
+    a {
+      display: inline-flex;
+    }
+  }
+}
+
+.header a#logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+nav > ul > li {
+  justify-content: center;
+  display: inline-block;
+}
+
+.categories {
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+

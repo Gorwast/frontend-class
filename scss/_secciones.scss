@@ -1,0 +1,48 @@
+.container {
+  background-color: $background-color-dark;
+
+  min-height: 100vh;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.section {
+  @include display(flex, column, nowrap, center, center, space-between);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+#company-text {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Bungee Inline", cursive;
+
+  font-size: 4em;
+}
+
+#inicio {
+  min-height: 50vh;
+
+  @include display(flex, row, nowrap, center, center, center);
+
+  transition: 0.3s;
+  color: $accent-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  transition: 300ms
+}
+
+#eventos {
+  @include display(flex, row, wrap, center, center, space-between);
+
+  padding: 20px;
+}

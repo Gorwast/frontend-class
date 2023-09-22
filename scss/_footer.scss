@@ -1,0 +1,47 @@
+
+.contacto-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 40vw;
+
+  margin: 8px;
+
+  input,textarea {
+    margin: inherit;
+  }
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 35%;
+  height: 0;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+}
+
+.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 10 px;
+}
+
+.social-section {
+  padding: 0px 10px 0px 0px;
+  a {
+    padding: inherit;
+    i {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
