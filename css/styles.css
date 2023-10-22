@@ -291,6 +291,7 @@ nav > ul > li {
 .contacto-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .contacto-form {
@@ -305,7 +306,7 @@ nav > ul > li {
 
 .map-container {
   position: relative;
-  padding-bottom: 35%;
+  padding-bottom: 40%;
   height: 0;
   width: 100%;
   margin: 10px 0 10px 0;
@@ -404,6 +405,10 @@ nav > ul > li {
   }
   .map-container {
     padding-bottom: 70%;
+  }
+
+  .contacto-form * {
+    width: 100%;
   }
 }
 

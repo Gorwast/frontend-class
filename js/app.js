@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const nombreconst = contactoForm.getElementById("nombre").value();
+    console.log(nombreconst);
   });
 });
 
@@ -39,3 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(top);
   });
 });
+

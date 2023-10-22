@@ -20,12 +20,12 @@
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.min.css" />
 
-    <link rel="manifest" href="site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#fafafa" />
   </head>
 
@@ -33,7 +33,7 @@
     <div class="fx-row header">
       <div class="logo">
         <a id="logo">
-          <img src="./img/logo.png" alt="Play&Win" />
+          <img src="/img/logo.png" alt="Play&Win" />
         </a>
       </div>
       <div class="categories">
@@ -60,7 +60,7 @@
             xmlns="http://www.w3.org/2000/svg"
             height="2em"
             viewBox="0 0 512 512"
-            style="color: white;"
+            style="color: white"
           >
             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -72,76 +72,60 @@
       </div>
     </div>
     <main>
-      <div id="inicio" class="container">
-        <h1 id="company-text">Play & Win</h1>
-      </div>
       <div class="container" id="top">
         <div class="section">
-          <h2 class="section-heading">&star; Juegos de la semana &star;</h2>
-          <img src="./img/background-img-1.jpg" alt="Fondo con Juegos" />
-          <p class="section-content"></p>
+          <h2 class="section-heading">&star; Tienda &star;</h2>
         </div>
+        <form id="filter-form">
+          <div id="filter-section">
+            <input
+              type="text"
+              id="text"
+              placeholder="Nombre o descripción"
+              class="filter-field"
+            />
+            <input
+              type="number"
+              id="bedrooms"
+              placeholder="Número de habitaciones"
+              class="filter-field"
+            />
+            <input
+              type="number"
+              id="price-min"
+              placeholder="Precio mínimo"
+              class="filter-field"
+            />
+            <input
+              type="number"
+              id="price-max"
+              placeholder="Precio máximo"
+              class="filter-field"
+            />
+
+            <button type="submit" id="apply-filters">Aplicar filtros</button>
+            <button type="reset" id="reset-filters">Restablecer</button>
+          </div>
+        </form>
+        <p id="message"></p>
+        <div class="section" id="game-store-body"></div>
+        <div class="section store-section"></div>
         <div class="triple-section">
           <div class="col-3">
             <h3>Juego 1<br />Baldur's Gate III</h3>
-            <img src="./img/game.webp" alt="Juego 1" />
+            <img src="/img/game.webp" alt="Juego 1" />
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="col-3">
             <h3>Juego 2<br />The Legend of Zelda: Tears of the Kingdom</h3>
-            <img src="./img/game_2.jpeg" alt="Juego 2" />
+            <img src="/img/game_2.jpeg" alt="Juego 2" />
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="col-3">
             <h3>Juego 3<br />The Witcher III</h3>
-            <img src="./img/game_3.jfif" alt="Juego 3" />
+            <img src="/img/game_3.jfif" alt="Juego 3" />
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-        </div>
-        <a href="/store" class="button">Ver Mas</a>
-      </div>
-      <div class="container">
-        <div class="section" id="reseñas">
-          <h2 class="section-heading">Reseñas</h2>
-          <div class="triple-section">
-            <div class="col-3">
-              <h3>Comentario 1</h3>
-              <img src="./img/user.png" alt="Comentario 1" />
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="col-3">
-              <h3>Comentario 2</h3>
-              <img src="./img/user.png" alt="Comentario 2" />
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="col-3">
-              <h3>Comentario 3</h3>
-              <img src="./img/user.png" alt="Comentario 3" />
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-
-          <p style="font-style: italic">¿Quieres enviar tu reseña?</p>
-
-          <a href="#footer" class="button">¡Envianos un Correo!</a>
-        </div>
-      </div>
-      <div class="container">
-        <h2 class="section-heading">Proximos Eventos</h2>
-        <div class="section" id="eventos">
-          <div class="col-60">
-            <h2>Torneo de Gaming</h2>
-            <img src="./img/tournament-1.png" alt="Evento 1" />
-            <p>Fecha: 21 de Noviembre del 2023</p>
-            <a href="#events" class="button" id="events-button">Ver mas</a>
-          </div>
-          <div class="col-40">
-            <h3>Bazar Gamer</h3>
-            <img src="./img/images-2.jfif" alt="Evento 2" />
-            <p>Fecha: 21 de Noviembre del 2023</p>
-            <a href="#events" class="button" id="events-button">Ver mas</a>
-          </div>
-          <br />
         </div>
       </div>
     </main>
@@ -196,8 +180,9 @@
         />
       </svg>
     </button>
-    <script src="js/vendor/modernizr-3.12.0.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="/shared/utils.js"></script>
+    <script src="app.js"></script>
     <script
       src="https://kit.fontawesome.com/d825e33153.js"
       crossorigin="anonymous"
