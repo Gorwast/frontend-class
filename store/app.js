@@ -1,3 +1,5 @@
+
+const apiURL = 'https://65359710c620ba9358ec9353.mockapi.io';
 class Game {
   constructor(
     id,
@@ -69,25 +71,11 @@ const game4 = new Game(
 // Almacenamos los objetos en un array
 const gameList = [game1, game2, game3];
 
-// Accedemos datos por indices
-console.log("Impresion en consola de elementos accesados por indices: ");
-console.log(gameList[0]);
-console.log(gameList[1]);
-console.log(gameList[1]);
-
-// Accedemos datos con funcion forEach() de array
-console.log("Impresion en consola de elementos accesados con forEach(): ");
-gameList.forEach((item) => {
-  console.log(item);
-});
-
-//#endregion
-
 //#region VISTA DE LOS MODELOS EN HTML (VIEW)
 
 // Funcion que controla el despliegue de un array de Game en la tabla, asi como el mensaje a mostrar.
 function displayTable(games) {
-  
+
   clearTable();
 
   showLoadingMessage();
@@ -98,25 +86,24 @@ function displayTable(games) {
     } else {
       hideMessage();
 
-      const tablaBody = document.getElementById("game-store-body");
+      const tablaBody = document.getElementById("data-table-body");
 
       const imagePath = `/img/games`;
 
       games.forEach((game) => {
-        const row = document.createElement("div");
+        const row = document.createElement("tr");
 
         row.innerHTML = `
               <td> ${game.id} </td>
-              <td> <img src="${imagePath + game.image}" alt="${
-          game.name
-        }" width="100"> </td>
+              <td> <img src="${imagePath + game.image}" alt="${game.name
+          }" width="100"> </td>
               <td>${game.name}</td>
               <td>${game.description}</td>
               <td>${game.rating}</td>
               <td>${game.categories}</td>
               <td>${formatCurrency(game.price)}</td>
-              <td>${formatM2(game.players)}</td>
-              <td>${formatM2(game.constructionArea)}</td>
+              <td>${game.players}</td>
+              <td>${game.image}</td>
             `;
 
         tablaBody.appendChild(row);
@@ -127,7 +114,7 @@ function displayTable(games) {
 
 // Funcion que limpia la tabla
 function clearTable() {
-  const tableBody = document.getElementById("game-store-body");
+  const tableBody = document.getElementById("data-table-body");
 
   tableBody.innerHTML = "";
 }
@@ -207,6 +194,38 @@ function filterGames(games, text, rating, minPrice, maxPrice) {
   );
 }
 
-displayTable(gameList);
+function searchData() {
+
+  const OPTIONS = {
+    method: 'GET'
+  };
+
+  fetch(`${apiURL}/games`, OPTIONS)
+    .then(response => response.json())
+    .then(data => {
+      // Mapeamos los datos de modelos a objetos de la clase RealEstate.
+      gamesList = data.map(item => {
+
+        return new Game(
+          item.id,
+          item.name,
+          item.description,
+          item.rating,
+          item.categories,
+          item.price,
+          item.players,
+          item.image
+        );
+      });
+
+      // Mostramos los datos en la vista.
+      displayTable(gamesList);
+
+    })
+    .catch(error => console.log(error));
+
+}
+
+searchData();
 
 initButtonsHandler();

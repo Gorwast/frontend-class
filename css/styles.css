@@ -154,8 +154,8 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .triple-section {
@@ -166,11 +166,11 @@ footer {
   width: 33%;
   padding: 20px;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   align-items: center;
+  justify-content: center;
 }
 .col-3 h3 {
   text-align: center;
@@ -183,21 +183,25 @@ footer {
 .col-60 {
   width: 60%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .col-40 {
   width: 40%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  background-color: #e6e5e5;
+  background-color: hsl(0, 2%, 75%);
   min-height: 100vh;
   padding: 20px;
   margin: 20px;
@@ -209,8 +213,8 @@ footer {
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .section-heading {
@@ -229,13 +233,14 @@ footer {
 #inicio {
   min-height: 50vh;
   display: flex;
-  align-content: center;
-  justify-content: center;
   flex-direction: row;
-  align-items: center;
   flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
   color: #e50f0f;
+  transition: 300ms;
 }
 #inicio:hover {
   background-color: hsl(0, 87%, 36%);
@@ -247,8 +252,8 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -291,7 +296,6 @@ nav > ul > li {
 .contacto-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .contacto-form {
@@ -306,7 +310,7 @@ nav > ul > li {
 
 .map-container {
   position: relative;
-  padding-bottom: 40%;
+  padding-bottom: 35%;
   height: 0;
   width: 100%;
   margin: 10px 0 10px 0;
@@ -406,10 +410,53 @@ nav > ul > li {
   .map-container {
     padding-bottom: 70%;
   }
+}
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
 
-  .contacto-form * {
-    width: 100%;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table thead tr {
+  background-color: hsl(0, 87%, 36%);
+  color: #121111;
+  text-align: left;
+}
+table thead tr th {
+  border: none;
+  font-size: 1.125rem;
+  padding: 2rem 1.25rem;
+  white-space: nowrap;
+}
+table tbody tr {
+  border-bottom: none;
+}
+table tbody tr:nth-of-type(even) {
+  background-color: #e6e5e5;
+}
+table tbody tr:last-of-type {
+  border-bottom: 4px solid hsl(0, 87%, 36%);
+}
+table tbody tr td {
+  padding: 1rem 1.25rem;
+  border: none;
+  white-space: wrap;
+}
+table tbody tr td img {
+  max-width: 100px;
+  height: auto;
+}
+
+.message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
